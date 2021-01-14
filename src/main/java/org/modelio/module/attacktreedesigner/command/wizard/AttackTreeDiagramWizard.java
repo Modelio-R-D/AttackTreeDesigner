@@ -12,7 +12,6 @@ import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.contributor.AbstractWizardContributor;
 import org.modelio.api.module.contributor.ElementDescriptor;
-import org.modelio.api.module.contributor.diagramcreation.IDiagramWizardContributor;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.metamodel.diagrams.StaticDiagram;
 import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
@@ -32,37 +31,37 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 /**
  * @author ebrosse
  */
-public class AttackTreeDiagramWizard extends AbstractWizardContributor implements IDiagramWizardContributor {
+public class AttackTreeDiagramWizard extends AbstractWizardContributor {
     @Override
     public AbstractDiagram actionPerformed(ModelElement owner, String diagramName, String description) {
         IModuleContext moduleContext = AttackTreeDesignerModule.getInstance().getModuleContext();
         IModelingSession session = moduleContext.getModelingSession();
         String name = Messages.getString ("Ui.Command.AttackTreeDiagramExplorerCommand.Label");
         StaticDiagram diagram = null;
-        
+
         try( ITransaction transaction = session.createTransaction(Messages.getString ("Info.Session.Create", "AttackTree Diagram"))){
-        
+
             diagram = session.getModel().createStaticDiagram(name, owner, IAttackTreeDesignerPeerModule.MODULE_NAME, AttackTreeStereotypes.ATTACK_TREE_DIAGRAM);
-        
+
             if (diagram != null) {
                 IDiagramService ds = moduleContext.getModelioServices().getDiagramService();
                 try(  IDiagramHandle handler = ds.getDiagramHandle(diagram);){
                     IDiagramDG dg = handler.getDiagramNode();
-        
+
                     for (IStyleHandle style : ds.listStyles()){
                         if (style.getName().equals("sysml")){
                             dg.setStyle(style);
                             break;
                         }
                     }
-        
+
                     handler.save();
                     handler.close();
                 }
-        
+
                 moduleContext.getModelioServices().getEditionService().openEditor(diagram);
             }
-        
+
             transaction.commit ();
         } catch (ExtensionNotFoundException e) {
             moduleContext.getLogService().error(e);
