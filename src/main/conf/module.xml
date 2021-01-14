@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Module id="${project.name}" class="org.modelio.module.attacktreedesigner.impl.AttackTreeDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="e9061c29-1a92-4608-891f-1e3d3b2f2bd6" author="Softeam" image="" url="">
+    <ClassPath>
+        <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+    </ClassPath>
+    <Profiles>
+        <Profile uid="e37a5820-06b4-4268-a1de-46eb78224dce" id="attacktree">
+            <Stereotype name="AND" metaclass="Standard.Class" owner-stereotype="mref#'' {661729c8-31ab-40bb-a3fc-7a065dbae0c2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.AND.label" uid="25f299d0-3f80-4347-964f-4a317676e21e" is-abstract="false">
+                <Icon path="res/icon/gui/AndGate_24.png"/>
+                <Image path="res/icon/gui/AndGate_48.png"/>
+            </Stereotype>
+            <Stereotype name="OR" metaclass="Standard.Class" owner-stereotype="mref#'' {661729c8-31ab-40bb-a3fc-7a065dbae0c2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.OR.label" uid="3664495d-49db-45c1-a18b-4e4e7cb08345" is-abstract="false">
+                <Icon path="res/icon/gui/OrGate_24.png"/>
+                <Image path="res/icon/gui/OrGate_48.png"/>
+            </Stereotype>
+            <Stereotype name="Attack" metaclass="Standard.Class" owner-stereotype="mref#'' {9c3f6aa5-547c-4558-87db-d64dca132d75} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Attack.label" uid="02703c05-0dd1-4698-b017-b46d57d79e0e" is-abstract="false">
+                <Icon path="res/icon/gui/Attack_24.png"/>
+                <Image path="res/icon/gui/Attack_48.png"/>
+                <TagTypes>
+                    <TagType name="Severity" uid="d8fb88fd-74a5-49a4-808c-750ab6e76b3f" label="%tagtype.null.label" parameter-card="" is-hidden="false" is-signed="false"/>
+                    <TagType name="Probability" uid="035608cc-09d8-450e-a160-8889204ad6de" label="%tagtype.null.label" parameter-card="" is-hidden="false" is-signed="false"/>
+                    <TagType name="Security related" uid="923a8a26-c1af-4c8d-b627-c75164e8ba61" label="%tagtype.Security related.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="Safety related" uid="e6005ad7-e8fe-45bd-ad76-6c2e195de688" label="%tagtype.Safety related.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="Out of scope" uid="6cdb9550-932c-4872-bd5b-47dac059f337" label="%tagtype.Out of scope.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="Custom tag" uid="65adbe17-0416-4b30-a996-40e7f9a96860" label="%tagtype.Custom tag.label" parameter-card="*" is-hidden="false" is-signed="false"/>
+                    <TagType name="Countered attack" uid="3268b8f4-f4e7-4899-9341-f1e561a69117" label="%tagtype.Countered attack.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+                <NoteTypes>
+                    <NoteType name="Counter-Measure" label="%notetype.Counter-Measure.label" is-hidden="false" uid="8b0986b3-4622-4ba5-86b8-193ea3589f36" mime-type="text/plain"/>
+                </NoteTypes>
+            </Stereotype>
+            <Stereotype name="Root" metaclass="Standard.Class" owner-stereotype="mref#'' {02703c05-0dd1-4698-b017-b46d57d79e0e} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Root.label" uid="d05ac5e1-3789-443f-8fb9-d7be2ce89edc" is-abstract="false">
+                <Icon path="res/icon/gui/Root_24.png"/>
+                <Image path="res/icon/gui/Root_48.png"/>
+            </Stereotype>
+            <Stereotype name="SubTree" metaclass="Standard.Class" owner-stereotype="mref#'' {9c3f6aa5-547c-4558-87db-d64dca132d75} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.SubTree.label" uid="eb03144b-ffdf-4643-9eea-d9008800a617" is-abstract="false">
+                <Icon path="res/icon/gui/SubTree_24.png"/>
+                <Image path="res/icon/gui/SubTree_48.png"/>
+            </Stereotype>
+            <Stereotype name="Connection" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="false" label="%stereotype.Connection.label" uid="040af89d-22db-4117-acb5-e9ae7f333c60" is-abstract="false">
+                <Icon path="res/icon/gui/Connection.png"/>
+                <Image path="res/icon/gui/Connection (1).png"/>
+            </Stereotype>
+            <Stereotype name="Operator" metaclass="Standard.Class" owner-stereotype="mref#'' {9c3f6aa5-547c-4558-87db-d64dca132d75} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.Operator.label" uid="661729c8-31ab-40bb-a3fc-7a065dbae0c2" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="Node" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.Node.label" uid="9c3f6aa5-547c-4558-87db-d64dca132d75" is-abstract="true">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TreeReference" metaclass="Standard.Class" owner-stereotype="mref#'' {9c3f6aa5-547c-4558-87db-d64dca132d75} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TreeReference.label" uid="c85b8741-354e-43f5-be03-a53c72961da3" is-abstract="false">
+                <Icon path="res/icon/gui/ReferenceTreeDecoration_24.png"/>
+                <Image path="res/icon/gui/ReferenceTreeDecoration_48.png"/>
+            </Stereotype>
+            <Stereotype name="TreeReferenceAttribute" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TreeReferenceAttribute.label" uid="4f155d1d-2a98-43b0-be60-57d26b75b56f" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="ThreatAnalysis" metaclass="Infrastructure.Dependency" owner-stereotype="" is-hidden="false" label="%stereotype.ThreatAnalysis.label" uid="53408021-45e2-4fc6-84c4-8f567a6b7a99" is-abstract="false">
+                <Icon path="res/icon/gui/ThreatAnalysis_24.png"/>
+                <Image path="res/icon/gui/ThreatAnalysis_48.png"/>
+            </Stereotype>
+        </Profile>
+        <Profile uid="6f44d2e9-1fa5-46cd-9763-62c01694f4e1" id="attacktree.diagrams">
+            <Stereotype name="AttackTreeDiagram" metaclass="Standard.ClassDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.AttackTreeDiagram.label" uid="17c8cb6f-3fd4-4187-91a7-02752ca2c4a6" is-abstract="false">
+                <Icon path="res/icon/gui/diag_bis_24.png"/>
+                <Image path="res/icon/gui/diag_bis_48.png"/>
+            </Stereotype>
+        </Profile>
+    </Profiles>
+    <Gui>
+        <Commands>
+            <Command id="CreateAttackTreeDiagram" label="%command.CreateAttackTreeDiagram.label" tooltip="%command.CreateAttackTreeDiagram.tooltip" image="res/icon/gui/diag_bis_24.png" modify-model="false">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.AttackTreeDiagramCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Command>
+            <Command id="Import_a_tree" label="%command.Import_a_tree.label" tooltip="%command.Import_a_tree.tooltip" image="res/icon/gui/Import2_24.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.ImportCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Command>
+            <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/Export_24.png" modify-model="false">
+                <Scope metaclass="Standard.Class" stereotype="AttackTreeDesigner#Root"/>
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.ExportCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Command>
+            <Command id="Mask_SubTree" label="%command.Mask_SubTree.label" tooltip="%command.Mask_SubTree.tooltip" image="res/icon/gui/Mask_24.png" modify-model="false">
+                <Scope metaclass="Standard.Class" stereotype="AttackTreeDesigner#Attack"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.MaskSubTreeCommand"/>
+            </Command>
+            <Command id="Unmask_SubTree" label="%command.Unmask_SubTree.label" tooltip="%command.Unmask_SubTree.tooltip" image="res/icon/gui/UnMask_24.png" modify-model="false">
+                <Scope metaclass="Standard.Class" stereotype="AttackTreeDesigner#SubTree"/>
+                <Scope metaclass="Standard.Class" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.UnmaskSubTreeCommand"/>
+            </Command>
+            <Command id="Auto_Layout" label="%command.Auto_Layout.label" tooltip="%command.Auto_Layout.tooltip" image="res/icon/gui/AutoLayout_24.png" modify-model="true">
+                <Scope metaclass="Standard.ClassDiagram" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.AutoLayoutCommand"/>
+            </Command>
+            <Command id="Open_referenced_tree_diagram" label="%command.Open_referenced_tree_diagram.label" tooltip="%command.Open_referenced_tree_diagram.tooltip" image="res/icon/gui/OpenRefTreeDiagCommand_24.png" modify-model="false">
+                <Scope metaclass="Standard.Class" stereotype="AttackTreeDesigner#TreeReference"/>
+                <Scope metaclass="Standard.Attribute" stereotype="AttackTreeDesigner#TreeReferenceAttribute"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.OpenReferencedTreeDiagram">
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Command>
+            <Command id="Import_a_package" label="%command.Import_a_package.label" tooltip="%command.Import_a_package.tooltip" image="res/icon/gui/ImportPackage_24.png" modify-model="true">
+                <Scope metaclass="Standard.Package" stereotype=""/>
+                <Scope metaclass="Standard.Project" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.ImportPackageCommand"/>
+            </Command>
+            <Command id="Add_a_Custom_Tag_property" label="%command.Add_a_Custom_Tag_property.label" tooltip="%command.Add_a_Custom_Tag_property.tooltip" image="res/icon/gui/Add_Custom_Tag_24.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="AttackTreeDesigner#Attack"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.AddCustomTagCommand">
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Command>
+            <Command id="Remove_a_Custom_Tag_property" label="%command.Remove_a_Custom_Tag_property.label" tooltip="%command.Remove_a_Custom_Tag_property.tooltip" image="res/icon/gui/Remove_Custom_Tag_24.png" modify-model="true">
+                <Scope metaclass="Standard.Class" stereotype="AttackTreeDesigner#Attack"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.explorer.RemoveCustomTagCommand"/>
+            </Command>
+        </Commands>
+        <Tools>
+            <Tool id="AND" label="%tool.AND.label" tooltip="%tool.AND.tooltip" image="res/icon/gui/AndGate_24.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.tools.AndMultiLinkTool">
+                    <HParameter name="metaclass" value="Standard.Constraint"/>
+                    <HParameter name="name" value="AND"/>
+                </Handler>
+            </Tool>
+            <Tool id="Attack" label="%tool.Attack.label" tooltip="%tool.Attack.tooltip" image="res/icon/gui/Attack_24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="AttackTreeDesigner#Root"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.tools.CreateAttackTool">
+                    <HParameter name="stereotype" value="AttackTreeDesigner#Attack"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Attack"/>
+                </Handler>
+            </Tool>
+            <Tool id="OR" label="%tool.OR.label" tooltip="%tool.OR.tooltip" image="res/icon/gui/OrGate_24.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.tools.OrMultiLinkTool">
+                    <HParameter name="metaclass" value="Standard.Constraint"/>
+                    <HParameter name="name" value="OR"/>
+                </Handler>
+            </Tool>
+            <Tool id="Connection" label="%tool.Connection.label" tooltip="%tool.Connection.tooltip" image="res/icon/gui/Connection_24.png">
+                <Scope-source metaclass="Standard.Class" stereotype=""/>
+                <Scope-target metaclass="Standard.Class" stereotype="AttackTreeDesigner#Attack"/>
+                <Scope-target metaclass="Standard.Class" stereotype="AttackTreeDesigner#Operator"/>
+                <Scope-target metaclass="Standard.Class" stereotype="AttackTreeDesigner#SubTree"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.tools.ConnectionTool">
+                    <HParameter name="stereotype" value="AttackTreeDesigner#Connection"/>
+                    <HParameter name="metaclass" value="Infrastructure.Dependency"/>
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Tool>
+            <Tool id="CounterMeasure" label="%tool.CounterMeasure.label" tooltip="%tool.CounterMeasure.tooltip" image="res/icon/gui/CounterMeasure_24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="AttackTreeDesigner#Attack"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.tools.CounterMeasureTool">
+                    <HParameter name="metaclass" value="Infrastructure.Note"/>
+                    <HParameter name="name" value="CounterMeasure"/>
+                </Handler>
+            </Tool>
+            <Tool id="Reference_Attack_Tree" label="%tool.Reference_Attack_Tree.label" tooltip="%tool.Reference_Attack_Tree.tooltip" image="res/icon/gui/ReferenceTreeDecoration_24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="AttackTreeDesigner#Root"/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.tools.CreateTreeReferenceTool">
+                    <HParameter name="stereotype" value="AttackTreeDesigner#TreeReference"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Tree Reference"/>
+                </Handler>
+            </Tool>
+            <Tool id="Analyse_Threat" label="%tool.Analyse_Threat.label" tooltip="%tool.Analyse_Threat.tooltip" image="res/icon/gui/ThreatAnalysis_24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="AttackTreeDesigner#Attack"/>
+                <Scope-target metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="org.modelio.module.attacktreedesigner.command.tools.AnalyseThreatTool">
+                    <HParameter name="stereotype" value="AttackTreeDesigner#ThreatAnalysis"/>
+                    <HParameter name="metaclass" value="Infrastructure.Dependency"/>
+                    <HParameter name="name" value=""/>
+                </Handler>
+            </Tool>
+        </Tools>
+        <ContextualMenu>
+            <CommandRef refid="CreateAttackTreeDiagram" group="" group-image=""/>
+            <CommandRef refid="Mask_SubTree" group="" group-image=""/>
+            <CommandRef refid="Unmask_SubTree" group="" group-image=""/>
+            <CommandRef refid="Auto_Layout" group="" group-image=""/>
+            <CommandRef refid="Import_a_tree" group="" group-image=""/>
+            <CommandRef refid="Export" group="" group-image=""/>
+            <CommandRef refid="Open_referenced_tree_diagram" group="" group-image=""/>
+            <CommandRef refid="Import_a_package" group="" group-image=""/>
+        </ContextualMenu>
+        <Diagrams>
+            <DiagramType base-diagram="Standard.ClassDiagram" stereotype="AttackTreeDesigner#AttackTreeDiagram">
+                <Palette keepBasePalette="true"/>
+                <Wizard label="%wizard.Attack_Tree_Diagram.label" icon="res/icon/gui/diag_bis_24.png" information="%wizard.Attack_Tree_Diagram.info" details="%wizard.Attack_Tree_Diagram.detail" preview-image="res/icon/gui/Untitled drawing (1).png">
+                    <Scope metaclass="Standard.Package" stereotype=""/>
+                    <Handler class="GenericWizardContributor">
+                        <HParameter name="style" value="attacktree"/>
+                    </Handler>
+                </Wizard>
+                <Handler class="org.modelio.module.attacktreedesigner.customizer.AttackTreeDiagramCustomizer">
+                    <HParameter name="stereotype" value="AttackTreeDesigner#AttackTreeDiagram"/>
+                    <HParameter name="metaclass" value="Standard.ClassDiagram"/>
+                </Handler>
+            </DiagramType>
+        </Diagrams>
+        <Views>
+            <PropertyPage id="Attack_Tree" class="org.modelio.module.attacktreedesigner.property.AttackTreePropertyPage" label="%propertypage.Attack_Tree.label" image="res/icon/gui/module.png">
+                <CommandRef refid="Add_a_Custom_Tag_property" group="" group-image=""/>
+                <CommandRef refid="Remove_a_Custom_Tag_property" group="" group-image=""/>
+            </PropertyPage>
+        </Views>
+    </Gui>
+    <Resources>
+        <Styles>
+            <Style id="attacktree" path="res/generated/styles/attacktree.style"/>
+        </Styles>
+    </Resources>
+</Module>

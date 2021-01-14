@@ -1,0 +1,59 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="attackTree" type="attackTreeType"/>
+
+    <xs:complexType name="attackTreeType">
+        <xs:sequence>
+            <xs:element type="treeDiagramType" name="treeDiagram" minOccurs="1" maxOccurs="1"/>
+            <xs:element type="attackType" name="attack" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="treeDiagramType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="attackType">
+        <xs:sequence>
+            <xs:element type="tagType" name="tag" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="counterMeasureType" name="counterMeasure" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="operatorType" name="operator" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="name" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="tagType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="name" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="counterMeasureType">
+        <xs:attribute type="xs:string" name="content" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="treeReferenceType">
+        <xs:attribute type="xs:string" name="ref"/>
+    </xs:complexType>
+
+    <xs:complexType name="operatorType">
+        <xs:sequence>
+            <xs:choice minOccurs="2" maxOccurs="unbounded">
+                <xs:element type="attackType" name="attack"/>
+                <xs:element type="treeReferenceType" name="treeReference"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute type="operationType" name="type" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="operationType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AND" />
+            <xs:enumeration value="OR" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
