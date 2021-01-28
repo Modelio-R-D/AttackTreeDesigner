@@ -8,14 +8,14 @@ This module offers an ergonomic environment for designers and contains additiona
 
 For more information, visit our link:https://github.com/Modelio-R-D/AttackTreeDesigner/wiki[**Wiki**] page.  
 
-image:Example.png[]
+image:readme//example.png[]
         **Attack Tree Designer Environment**
 
 
 == **Dependencies**
 
 * link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java 8 JDK] 
-* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 4.1]        image:images//logo-modelio-v4.png"[]  
+* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 4.1]        image:readme//logo-modelio-v4.png"[]  
 
 == **Contributing**
 
@@ -25,7 +25,7 @@ Please fork and make your changes. For major changes, please open an issue and d
 
 == **Affiliation**
 
-image:cpswarm.png[CPSwarm]
+image:readme//cpswarm.png[CPSwarm]
 This module is developed by Softeam R&D Department and this work is supported by the European Commission through the link:https://cpswarm.eu[CPSwarm H2020 project] under grant no. 731946.
 
 
