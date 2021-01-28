@@ -1,4 +1,4 @@
- image:readme//logo-modelio-v4.png"[] 
+image:readme//logo-modelio-v4.png[] 
 
 = **Attack Tree Designer**
 
