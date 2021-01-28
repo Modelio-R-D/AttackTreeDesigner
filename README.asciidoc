@@ -1,5 +1,5 @@
-Attack Tree Designer
-====
+**Attack Tree Designer**
+
 **Attack Tree Designer** is an Open Source Modelling Tool conceived for designing [<b> Attack Trees </b>](https://en.wikipedia.org/wiki/Attack_tree). **Attack Tree Designer** is deployed as a module in [<b>Modelio</b>](https://www.modelio.org/) modelling environent.
 
 **Attack Tree Designer** allows users to design attack trees diagrams showing how an asset or a target might be attacked. These diagrams are intended for security specialists for modelling the attacks that occur on IT systems or cyber-physical systems and describe the events that lead to the attack in the form of a tree in which the attack is represented by the root element which is related with “OR” and “AND” conditions to the children that represent the sequence of events that lead to the root attack.
@@ -13,21 +13,19 @@ image:images//Modify-Firmware-Diagram.png[]
         **Attack Tree Designer Environment**
 
 
-Dependencies
-----
+**Dependencies**
 
 * [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 * [Modelio 4.1](https://github.com/ModelioOpenSource/Modelio/)        image:images//logo-modelio-v4.png"[]  
 
-Contributing
-----
+**Contributing**
 
 Contributions are welcome. 
 Please fork and make your changes. For major changes, please open an issue and discuss it with the other authors.
 
 
-Affiliation
-----
+**Affiliation**
+
 
 ![CPSwarm](https://github.com/cpswarm/template/raw/master/cpswarm.png)  
 This module is developed by Softeam R&D Department and this work is supported by the European Commission through the [CPSwarm H2020 project](https://cpswarm.eu) under grant no. 731946.
