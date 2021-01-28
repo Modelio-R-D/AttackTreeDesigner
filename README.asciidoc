@@ -1,3 +1,5 @@
+ image:readme//logo-modelio-v4.png"[] 
+
 = **Attack Tree Designer**
 
 **Attack Tree Designer** is an Open Source Modelling Tool conceived for designing link:https://en.wikipedia.org/wiki/Attack_tree[**Attack Trees**]. **Attack Tree Designer** is deployed as a module in link:https://www.modelio.org/[**Modelio**] modelling environent.
@@ -15,7 +17,7 @@ image:readme//example.png[]
 == **Dependencies**
 
 * link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java 8 JDK] 
-* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 4.1]        image:readme//logo-modelio-v4.png"[]  
+* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 4.1]       
 
 == **Contributing**
 
