@@ -15,8 +15,8 @@ image:images//Modify-Firmware-Diagram.png[]
 
 **Dependencies**
 
-* [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
-* [Modelio 4.1](https://github.com/ModelioOpenSource/Modelio/)        image:images//logo-modelio-v4.png"[]  
+* link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java 8 JDK] 
+* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 4.1]        image:images//logo-modelio-v4.png"[]  
 
 **Contributing**
 
