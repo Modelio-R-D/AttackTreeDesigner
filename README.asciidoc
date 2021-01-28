@@ -9,7 +9,7 @@ This module offers an ergonomic environment for designers and contains additiona
 For more information, visit our [**Wiki**](https://github.com/cpswarm/modelio-attack-tree-module/wiki) page.  
 
 
-![](http://forge.modelio.org/attachments/download/22610/Example.png)
+image:images//Modify-Firmware-Diagram.png[]
         **Attack Tree Designer Environment**
 
 
@@ -47,6 +47,6 @@ Affiliation
 ----
 
 ![CPSwarm](https://github.com/cpswarm/template/raw/master/cpswarm.png)  
-This module is developed with :heart: by Softeam R&D Department and this work is supported by the European Commission through the [CPSwarm H2020 project](https://cpswarm.eu) under grant no. 731946.
+This module is developed by Softeam R&D Department and this work is supported by the European Commission through the [CPSwarm H2020 project](https://cpswarm.eu) under grant no. 731946.
 
 
