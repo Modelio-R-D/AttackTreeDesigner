@@ -68,8 +68,9 @@ public class AttackTreeDiagramWizard extends AbstractWizardContributor {
         }
         return diagram;
     }
-
-    @Override
+/*
+ * 
+ @Override
     public String getLabel() {
         return Messages.getString ("Ui.Command.AttackTreeDiagramExplorerCommand.Label");
     }
@@ -83,16 +84,16 @@ public class AttackTreeDiagramWizard extends AbstractWizardContributor {
     public String getHelpUrl() {
         return null;
     }
-
-    public Image getIcon() {
-        return new Image(Display.getDefault(),AttackTreeResourcesManager.getInstance().getImage("attacktreediagram.png"));
-    }
-
+    
     @Override
     public String getInformation() {
         return Messages.getString ("Ui.Command.AttackTreeDiagramExplorerCommand.Information");
     }
+    */
 
+    public Image getIcon() {
+        return new Image(Display.getDefault(),AttackTreeResourcesManager.getInstance().getImage("attacktreediagram.png"));
+    }
     public boolean accept(MObject selectedElt) {
         return  ((selectedElt != null)
                 && (selectedElt.getStatus().isModifiable())

@@ -17,7 +17,7 @@ image:readme//example.png[]
 == **Dependencies**
 
 * link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java 8 JDK] 
-* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 4.1]       
+* link:https://github.com/ModelioOpenSource/Modelio/[Modelio 5.4]       
 
 == **Contributing**
 

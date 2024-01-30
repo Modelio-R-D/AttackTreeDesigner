@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="${project.name}" class="org.modelio.module.attacktreedesigner.impl.AttackTreeDesignerModule" binaryversion="4.1.0" version="${project.version}" schema-level="2" uid="e9061c29-1a92-4608-891f-1e3d3b2f2bd6" author="Softeam" image="" url="">
+<Module id="${project.name}" class="org.modelio.module.attacktreedesigner.impl.AttackTreeDesignerModule" binaryversion="5.4.0" version="${project.version}" schema-level="2" uid="e9061c29-1a92-4608-891f-1e3d3b2f2bd6" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
     </ClassPath>

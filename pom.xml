@@ -5,7 +5,8 @@
   <!-- definition -->
   <groupId>org.modelio.module</groupId>
   <artifactId>attacktreedesigner</artifactId>
-  <version>1.0.00</version>
+  <version>2.0.1
+  </version>
   <name>AttackTreeDesigner</name>
   <repositories>
       <repository>
@@ -31,7 +32,7 @@
         <dependency>
             <groupId>org.modelio</groupId>
             <artifactId>MDAKit</artifactId>
-            <version>[4.1.0,4.1.1)</version>
+            <version>[5.4,5.5)</version>
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
@@ -57,7 +58,7 @@
             <plugin>
                 <groupId>org.modelio</groupId>
                 <artifactId>modelio-maven-plugin</artifactId>
-                <version>4.1.0.00</version>
+                <version>5.4.0.00</version>
                 <executions>
                     <execution>
                         <id>ModuleValidation</id>
@@ -181,7 +182,7 @@
                                                 modelio-maven-plugin
                                             </artifactId>
                                             <versionRange>
-                                                [4.1.0.00,)
+                                                [5.4.0.00,)
                                             </versionRange>
                                             <goals>
                                                 <goal>
