@@ -28,6 +28,6 @@ Please fork and make your changes. For major changes, please open an issue and d
 == **Affiliation**
 
 image:readme//cpswarm.png[CPSwarm]
-This module is developed by Softeam R&D Department and this work is supported by the European Commission through the link:https://cpswarm.eu[CPSwarm H2020 project] under grant no. 731946.
+This module is developed by Softeam R&D Department and this work is supported by the European Commission through the link:https://cpswarm.eu[CPSwarm H2020 project] under grant no. 731946, and continued in the Horizon Europe link:https://myrtus-project.eu/[project MYRTUS], grant No. 101135183.
 
 
