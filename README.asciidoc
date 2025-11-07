@@ -1,8 +1,8 @@
 image:readme//logo-modelio-v4.png[] 
 
-= **Attack Tree Designer**
+= **Attack-Defense Tree Designer**
 
-**Attack Tree Designer** is an Open Source Modelling Tool conceived for designing link:https://en.wikipedia.org/wiki/Attack_tree[**Attack Trees**]. **Attack Tree Designer** is deployed as a module in link:https://www.modelio.org/[**Modelio**] modelling environent.
+**Attack-Defense Tree Designer** is an Open Source Modelling Tool conceived for designing link:https://en.wikipedia.org/wiki/Attack_tree[**Attack Trees**]. **Attack Tree Designer** is deployed as a module in link:https://www.modelio.org/[**Modelio**] modelling environent.
 
 **Attack Tree Designer** allows users to design attack trees diagrams showing how an asset or a target might be attacked. These diagrams are intended for security specialists for modelling the attacks that occur on IT systems or cyber-physical systems and describe the events that lead to the attack in the form of a tree in which the attack is represented by the root element which is related with “OR” and “AND” conditions to the children that represent the sequence of events that lead to the root attack.
 
